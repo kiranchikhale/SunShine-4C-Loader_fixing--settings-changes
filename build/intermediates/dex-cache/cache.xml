@@ -2,32 +2,32 @@
 <items version="2" >
 
     <item
-        jar="D:\01.AndriodProjects\NanoDegree\SunShine-Lesson4C-WorkingCode\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
-        <dex dex="D:\01.AndriodProjects\NanoDegree\SunShine-Lesson4C-WorkingCode\app\build\intermediates\pre-dexed\debug\classes-8daf2ec9508fd3bdaf14679c47a97148dd9e7c74.jar" />
-    </item>
-    <item
         jar="D:\01.Andriod Devlopment\01.SDK_Installation\adt-bundle-windows-x86_64-20140702\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
-        <dex dex="D:\01.AndriodProjects\NanoDegree\SunShine-Lesson4C-WorkingCode\app\build\intermediates\pre-dexed\debug\support-annotations-23.0.1-3e9780e03cc43f5a90ace707364739caaac130ac.jar" />
+        <dex dex="D:\01.AndriodProjects\NanoDegree\GitHub\SunShine-Lesson4C-Loader_fixing-Detail-view\app\build\intermediates\pre-dexed\debug\support-annotations-23.0.1-3e9780e03cc43f5a90ace707364739caaac130ac.jar" />
     </item>
     <item
-        jar="D:\01.AndriodProjects\NanoDegree\SunShine-Lesson4C-WorkingCode\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
+        jar="D:\01.AndriodProjects\NanoDegree\GitHub\SunShine-Lesson4C-Loader_fixing-Detail-view\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
-        <dex dex="D:\01.AndriodProjects\NanoDegree\SunShine-Lesson4C-WorkingCode\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.1-04ef1fbbf92bbcbe11674e66c764f1e6dfe9d695.jar" />
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="D:\01.AndriodProjects\NanoDegree\GitHub\SunShine-Lesson4C-Loader_fixing-Detail-view\app\build\intermediates\pre-dexed\debug\classes-96176e17715e2b47d4ad484b5e67ca20c96ede88.jar" />
     </item>
     <item
-        jar="D:\01.AndriodProjects\NanoDegree\SunShine-Lesson4C-WorkingCode\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
+        jar="D:\01.AndriodProjects\NanoDegree\GitHub\SunShine-Lesson4C-Loader_fixing-Detail-view\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
-        <dex dex="D:\01.AndriodProjects\NanoDegree\SunShine-Lesson4C-WorkingCode\app\build\intermediates\pre-dexed\debug\classes-a16841ed23619b3989cde3ebd71eaca9dcc14685.jar" />
+        <dex dex="D:\01.AndriodProjects\NanoDegree\GitHub\SunShine-Lesson4C-Loader_fixing-Detail-view\app\build\intermediates\pre-dexed\debug\classes-991366ffdcbcfb8f0a22734587ef65e9ea674f59.jar" />
+    </item>
+    <item
+        jar="D:\01.AndriodProjects\NanoDegree\GitHub\SunShine-Lesson4C-Loader_fixing-Detail-view\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="D:\01.AndriodProjects\NanoDegree\GitHub\SunShine-Lesson4C-Loader_fixing-Detail-view\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.1-20b1a25a04ee5d32f51ebd57078371dda19ca1ff.jar" />
     </item>
 
 </items>

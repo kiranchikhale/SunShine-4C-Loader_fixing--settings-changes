@@ -34,7 +34,8 @@ public class MainActivityFragment extends Fragment implements LoaderManager.Load
     //ArrayAdapter<String> mForcastAdapter      = null;
     String LocSettings                          = null; // To store the Location shared preference value
     ForecastAdapter mForcastAdapter             = null;
-    public static final int FORCAST_LOADER      = 0;
+
+    private static final int FORECAST_LOADER = 0;
 
     private static final String[] FORECAST_COLUMNS = {
             // In this case the id needs to be fully qualified with a table name, since
@@ -115,7 +116,7 @@ public class MainActivityFragment extends Fragment implements LoaderManager.Load
         Uri weatherForLocationUri = WeatherContract.WeatherEntry.buildWeatherLocationWithStartDate(
                 locationSetting, System.currentTimeMillis());
 
-        Cursor cur = getActivity().getContentResolver().query(weatherForLocationUri,
+        final Cursor cur = getActivity().getContentResolver().query(weatherForLocationUri,
                 null, null, null, sortOrder);
         mForcastAdapter = new ForecastAdapter(getActivity(), cur, 0);
 
@@ -133,6 +134,7 @@ public class MainActivityFragment extends Fragment implements LoaderManager.Load
                 // CursorAdapter returns a cursor at the correct position for getItem(), or null
                 // if it cannot seek to that position.
                 Cursor cursor = (Cursor) parent.getItemAtPosition(position);
+                long l =  cursor.getLong(COL_WEATHER_DATE);
                 if (cursor != null) {
                     String locationSetting = Utility.getPreferredLocation(getActivity());
                     Intent intent = new Intent(getActivity(), DetailActivity.class)
@@ -146,7 +148,11 @@ public class MainActivityFragment extends Fragment implements LoaderManager.Load
         });
         return rootview;
     }
-
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        getLoaderManager().initLoader(FORECAST_LOADER, null, this);
+        super.onActivityCreated(savedInstanceState);
+    }
 
     /* The date/time conversion code is going to be moved outside the asynctask later,
      * so for convenience we're breaking it out into its own method now.
@@ -203,7 +209,7 @@ public class MainActivityFragment extends Fragment implements LoaderManager.Load
         String LocationSetting = Utility.getPreferredLocation(getActivity());
 
         //Sort order: Ascending, by date
-        String sortOrder = WeatherContract.WeatherEntry.COLUMN_DATE + "ASC";
+        String sortOrder = WeatherContract.WeatherEntry.COLUMN_DATE + " ASC";
         Uri weatherLocationUri = WeatherContract.WeatherEntry.buildWeatherLocationWithStartDate
                 (LocationSetting,
                         System.currentTimeMillis());
