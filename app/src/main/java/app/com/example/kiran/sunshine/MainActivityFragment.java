@@ -31,11 +31,12 @@ import app.com.example.kiran.sunshine.data.WeatherContract;
  */
 public class MainActivityFragment extends Fragment implements LoaderManager.LoaderCallbacks<Cursor>{
     private final String LOG_TAG                = MainActivityFragment.class.getSimpleName();
-    //ArrayAdapter<String> mForcastAdapter      = null;
     String LocSettings                          = null; // To store the Location shared preference value
     ForecastAdapter mForcastAdapter             = null;
+    private String mLocation                    = null;
+    private final String FORECASTFRAGMENT_TAG   = "FFTAG";
 
-    private static final int FORECAST_LOADER = 0;
+    private static final int FORECAST_LOADER    = 0;
 
     private static final String[] FORECAST_COLUMNS = {
             // In this case the id needs to be fully qualified with a table name, since
@@ -67,17 +68,21 @@ public class MainActivityFragment extends Fragment implements LoaderManager.Load
     static final int COL_COORD_LAT              = 7;
     static final int COL_COORD_LONG             = 8;
 
-
-
-
     public MainActivityFragment() {
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mLocation = Utility.getPreferredLocation(getActivity());
         setHasOptionsMenu(true);
+        if (savedInstanceState == null) {
+//            getFragmentManager().beginTransaction()
+//                    .add(R.id.container, new MainActivityFragment(), FORECASTFRAGMENT_TAG)
+//                    .commit();
+        }
     }
+
     @Override
     public void onCreateOptionsMenu(Menu menu,MenuInflater inflater) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -119,8 +124,6 @@ public class MainActivityFragment extends Fragment implements LoaderManager.Load
         final Cursor cur = getActivity().getContentResolver().query(weatherForLocationUri,
                 null, null, null, sortOrder);
         mForcastAdapter = new ForecastAdapter(getActivity(), cur, 0);
-
-
 
         ListView listView = (ListView) rootview.findViewById(R.id.List_view_Forcast);
 
@@ -171,6 +174,13 @@ public class MainActivityFragment extends Fragment implements LoaderManager.Load
         updateWeather();
     }
 
+    // since we read the location when we create the loader, all we need to do is restart things
+    void onLocationChanged( ) {
+        updateWeather();
+        getLoaderManager().restartLoader(FORECAST_LOADER, null, this);
+        }
+
+
     public void updateWeather()
     {
         FetchWeatherTask weatherTask = new FetchWeatherTask(getActivity());
@@ -202,6 +212,21 @@ public class MainActivityFragment extends Fragment implements LoaderManager.Load
             Log.d(LOG_TAG, "openPreferedLocationInMap : Map app not found");
         }
 
+    }
+        @Override
+        public void onResume()
+        {
+            super.onResume();
+            String location = Utility.getPreferredLocation(getActivity() );
+            // update the location in our second pane using the fragment manager
+            if (location != null && !location.equals(mLocation))
+            {
+            //MainActivityFragment ff = (MainActivityFragment)getFragmentManager().findFragmentByTag(FORECASTFRAGMENT_TAG);
+            //if ( null != ff ) {
+                    onLocationChanged();
+           //}
+             mLocation = location;
+            }
     }
 
     @Override
