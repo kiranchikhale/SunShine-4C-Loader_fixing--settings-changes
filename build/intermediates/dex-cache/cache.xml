@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="D:\01.Andriod Devlopment\01.SDK_Installation\adt-bundle-windows-x86_64-20140702\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="D:\01.AndriodProjects\NanoDegree\GitHub\SunShine-4C-Loader_fixing- settings changes\app\build\intermediates\pre-dexed\debug\support-annotations-23.0.1-3e9780e03cc43f5a90ace707364739caaac130ac.jar" />
+    </item>
+    <item
+        jar="D:\01.AndriodProjects\NanoDegree\GitHub\SunShine-4C-Loader_fixing- settings changes\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="D:\01.AndriodProjects\NanoDegree\GitHub\SunShine-4C-Loader_fixing- settings changes\app\build\intermediates\pre-dexed\debug\classes-dd3aed2ff96738e0f90d427c5b54e268496a8868.jar" />
+    </item>
+    <item
+        jar="D:\01.AndriodProjects\NanoDegree\GitHub\SunShine-4C-Loader_fixing- settings changes\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="D:\01.AndriodProjects\NanoDegree\GitHub\SunShine-4C-Loader_fixing- settings changes\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.1-81076c51ebce0216d4ee4b24cab1b7c615ee88bb.jar" />
+    </item>
+    <item
+        jar="D:\01.AndriodProjects\NanoDegree\GitHub\SunShine-4C-Loader_fixing- settings changes\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="D:\01.AndriodProjects\NanoDegree\GitHub\SunShine-4C-Loader_fixing- settings changes\app\build\intermediates\pre-dexed\debug\classes-91d8e71680e016a617c3992885c6d6b03af864ca.jar" />
+    </item>
+
+</items>
